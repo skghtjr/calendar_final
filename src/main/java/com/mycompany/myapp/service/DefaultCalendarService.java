@@ -104,6 +104,11 @@ public class DefaultCalendarService implements CalendarService {
 	public List<EventAttendee> getEventAttendeeByAttendeeId(int attendeeId) {
 		return eventAttendeeDao.findEventAttendeeByAttendeeId(attendeeId);
 	}
+	
+	@Override
+	public List<EventAttendee> getAllEventAttendee(){
+		return eventAttendeeDao.findAllEventAttendee();
+	}	
 
 	@Override
 	public int createEventAttendee(EventAttendee eventAttendee) {

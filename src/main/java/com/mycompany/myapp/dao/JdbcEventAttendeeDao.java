@@ -65,6 +65,11 @@ public class JdbcEventAttendeeDao implements EventAttendeeDao {
 		String sql_query = "select * from events_attendees where attendee = ?";
 		return this.jdbcTemplate.query(sql_query, new Object[] {attendeeId}, rowMapper);
 	}
+	
+    public List<EventAttendee> findAllEventAttendee(){
+		String sql_query = "select * from events_attendees";
+		return this.jdbcTemplate.query(sql_query, rowMapper);
+	}	
 
 	@Override
 	public int createEventAttendee(final EventAttendee eventAttendee) {

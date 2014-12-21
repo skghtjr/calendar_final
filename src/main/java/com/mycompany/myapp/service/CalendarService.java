@@ -35,6 +35,8 @@ public interface CalendarService {
     public List<EventAttendee> getEventAttendeeByEventId(int eventId);
     
     public List<EventAttendee> getEventAttendeeByAttendeeId(int attendeeId);
+    
+    public List<EventAttendee> getAllEventAttendee();
 
     public int createEventAttendee(EventAttendee eventAttendee);
 

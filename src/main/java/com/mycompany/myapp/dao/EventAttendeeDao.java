@@ -8,6 +8,8 @@ public interface EventAttendeeDao {
     public List<EventAttendee> findEventAttendeeByEventId(int eventId);
     
     public List<EventAttendee> findEventAttendeeByAttendeeId(int attendeeId);
+    
+    public List<EventAttendee> findAllEventAttendee();
 
     public int createEventAttendee(EventAttendee eventAttendee);
 
